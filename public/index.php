@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div style="padding:16px;">
-      <h1>Hello PHP</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex" />
+  <title>ひとこと掲示板</title>
+  <link rel="stylesheet" href="./assets/main.css" />
+</head>
 
-      <ul style="padding-left:1.5em;">
-        <li>
-          <a href="/info.php">phpinfo</a>
-        </li>
-        <li>
-          <a href="/database.php">database</a>
-        </li>
-      </ul>
+<body>
+  <div class="page-cover">
+
+    <p class="page-title">ひとこと掲示板</p>
+    <hr class="page-divider" />
+    <div class="form-cover">
+      <form action="/" method="post">
+        <div class="form-input-title">投稿者ニックネーム</div>
+        <input type="text" name="author_name" maxlength="40" value="" class="input-author-name" />
+        <div class="form-input-error">
+        </div>
+        <div class="form-input-title">投稿内容<small>(必須)</small></div>
+        <textarea name="message" class="input-message"></textarea>
+        <div class="form-input-error">
+        </div>
+        <input type="hidden" name="action_type" value="insert" />
+        <button type="submit" class="input-submit-button">投稿する</button>
+      </form>
     </div>
-  </body>
-</html>
+  <hr class="page-divider" />
+  </div>
+</body>
